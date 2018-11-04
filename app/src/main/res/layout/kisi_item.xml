@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe"
+        app:mode="same_level"
+        app:dragEdge="right"
+        >
+
+        <!-- Your secondary layout here -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/btndiolog"
+                android:text="@string/btnKisiSil"
+                android:textColor="@android:color/white"
+                android:drawableLeft="@android:drawable/ic_menu_delete"
+                android:id="@+id/btnDelete"
+                android:layout_marginBottom="3dp"/>
+        </FrameLayout>
+
+        <!-- Your main layout here -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/layoutdiolog"
+                android:orientation="horizontal"
+                android:id="@+id/linearr"
+                android:gravity="center_vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/kisiEmoji"
+                    android:src="@drawable/bos"
+                    android:layout_gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/AdSoyad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/tvKisiAdSoyad"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="italic"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="4dp"/>
+
+                <TextView
+                    android:id="@+id/TelNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="@string/tvNumara"
+                    android:textSize="15sp"
+                    android:textStyle="italic"
+                    android:layout_marginLeft="7dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+</LinearLayout>
+

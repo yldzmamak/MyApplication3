@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="banner_ad_unit_id">ca-app-pub-5507053716111047/8455618133</string>
+    <string name="app_name">Emoji Contact</string>
+    <string name="mesaj_gonder">Send E-Mail:</string>
+    <string name="tvKisiBilgileri">Contact Info</string>
+    <string name="tvKisilerim">Contacts</string>
+    <string name="etAdres">Address</string>
+    <string name="tvEmoji">Emoji</string>
+    <string name="btnCinsiyet">Gender :</string>
+    <string name="rbKadin">Female</string>
+    <string name="rbErkek">Male</string>
+    <string name="etAd">Name</string>
+    <string name="etSoyad">Surname</string>
+    <string name="etTelno">Telephone Number</string>
+    <string name="etEmail">E-Mail</string>
+    <string name="tpDogumtarihi">Birthday</string>
+    <string name="btnKaydet">SAVE</string>
+    <string name="yeniKisiEkle">Add new contacts</string>
+    <string name="btnKisiSil">Delete</string>
+    <string name="tvKisiAdSoyad">Name and Surname</string>
+    <string name="tvNumara">Number:</string>
+    <string name="tvKisiSil">Do you want to delete the contact?</string>
+    <string name="btnSil">DELETE</string>
+    <string name="btnIptal">CANCEL</string>
+    <string name="cikis">Exit</string>
+    <string name="kisiEkleLayout">root_view</string>
+    <string name="tvKisiBilgisi">Contact Info</string>
+    <string name="btnDuzenle">Edit</string>
+    <string name="tvMailAdresi">E-Mail:</string>
+    <string name="tvDgunu">Birthday:</string>
+    <string name="tvCinsiyet">GENDER</string>
+    <string name="tvKisiAra">Do you want to call the contact?</string>
+    <string name="btnAra">CALL</string>
+    <string name="gereklialan">Fields cannot be left blank</string>
+    <string name="eklendi">Create Contact.</string>
+    <string name="guncellendi">Updated Contact.</string>
+    <string name="silindi">Deleted Contact.</string>
+    <string name="kisiEkle">Click "'"+"'" to add a contact.</string>
+</resources>

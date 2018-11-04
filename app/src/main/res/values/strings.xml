@@ -1,0 +1,40 @@
+<resources>
+    <string name="banner_ad_unit_id">ca-app-pub-5507053716111047/8455618133</string>
+    <string name="app_name">Emoji Rehber</string>
+    <string name="tvKisiBilgileri">Kişi Bilgileri</string>
+    <string name="mesaj_gonder">Mesaj Gönder:</string>
+    <string name="tvKisilerim">Kişilerim</string>
+    <string name="tvEmoji">Emoji</string>
+    <string name="etAdres">Adres</string>
+    <string name="btnCinsiyet">Cinsiyet :</string>
+    <string name="rbKadin">Kadın</string>
+    <string name="rbErkek">Erkek</string>
+    <string name="etAd">Ad</string>
+    <string name="etSoyad">Soyad</string>
+    <string name="etTelno">Telefon Numarası</string>
+    <string name="etEmail">E-Mail</string>
+    <string name="tpDogumtarihi">Doğum Tarihi</string>
+    <string name="btnKaydet">KAYDET</string>
+    <string name="yeniKisiEkle">Yeni kişi ekle</string>
+    <string name="btnKisiSil">Sil</string>
+    <string name="tvKisiAdSoyad">Kişi adı ve soyadı</string>
+    <string name="tvNumara">Numara:</string>
+    <string name="tvKisiSil">Kişi silinsin mi?</string>
+    <string name="btnSil">SİL</string>
+    <string name="btnIptal">İPTAL</string>
+    <string name="cikis">Çıkış</string>
+    <string name="kisiEkleLayout">root_view</string>
+    <string name="tvKisiBilgisi">Kişi Bilgisi</string>
+    <string name="btnDuzenle">Düzenle</string>
+    <string name="tvMailAdresi">E-Mail:</string>
+    <string name="tvDgunu">Doğum günü:</string>
+    <string name="tvCinsiyet">CİNSİYET</string>
+    <string name="tvKisiAra">Kişi aransın mı?</string>
+    <string name="btnAra">ARA</string>
+    <string name="gereklialan">Tüm alanlar boş bırakılamaz.</string>
+    <string name="eklendi">Kişi eklendi.</string>
+    <string name="guncellendi">Kişi güncellendi.</string>
+    <string name="silindi">Kişi silindi.</string>
+    <string name="kisiEkle">Kişi eklemek için "'"+"'" tıklayınız.</string>
+
+</resources>
