@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.activeandroid.query.Delete;
 import com.chauthai.swipereveallayout.SwipeRevealLayout;
 import com.chauthai.swipereveallayout.ViewBinderHelper;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,10 +73,13 @@ public class adapter extends RecyclerView.Adapter<adapter.MyHolder> {
         ImageView kisiEmoji;
         public kisi item;
         LinearLayout linearLayout;
+        private AVLoadingIndicatorView avi;
+
 
         public MyHolder(View itemView) {
             super(itemView);
             itemView.setOnClickListener(this);
+
             adSoyad = (TextView) itemView.findViewById(R.id.AdSoyad);
             TelNo = (TextView) itemView.findViewById(R.id.TelNo);
             swipe = (SwipeRevealLayout) itemView.findViewById(R.id.swipe);

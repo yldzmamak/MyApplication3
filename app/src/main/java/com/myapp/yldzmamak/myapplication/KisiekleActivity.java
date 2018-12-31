@@ -157,9 +157,9 @@ public class KisiekleActivity extends AppCompatActivity {
                         yenikisi.setAdres(adres);
                         if (emojiDegeri.equals("2131165276") || emojiDegeri.equals("")) {
                             if (radioButtonKadin.isChecked()) {
-                                emojiDegeri = "2130837708";
+                                emojiDegeri = "2131165394";
                             } else if (radioButtonErkek.isChecked()) {
-                                emojiDegeri = "2130837705";
+                                emojiDegeri = "2131165391";
                             }
                         }
 
@@ -204,18 +204,18 @@ public class KisiekleActivity extends AppCompatActivity {
                         yenikisi.setDogumTarihi(dogumtarihi);
                         if (emojiDegeri.equals("2131165276") || emojiDegeri.equals("")) {
                             if (radioButtonKadin.isChecked()) {
-                                emojiDegeri = "2130837708";
+                                emojiDegeri = "2131165394";
                             } else if (radioButtonErkek.isChecked()) {
-                                emojiDegeri = "2130837705";
+                                emojiDegeri = "2131165391";
                             }
                         }
                         if(emojiDegeri.equals("")){
                             emojiDegeri = "2131165276";
                         }
-                        if (emojiDegeri.equals("2130837708") || emojiDegeri.equals("2130837705")){
+                        if (emojiDegeri.equals("2131165394") || emojiDegeri.equals("2131165391")){
                             if(cinsiyet =="1"){
-                                emojiDegeri = "2130837708";
-                            }else{ emojiDegeri = "2130837705";}
+                                emojiDegeri = "2131165394";
+                            }else{ emojiDegeri = "2131165391";}
                         }
 
                         yenikisi.setEmoji(emojiDegeri);

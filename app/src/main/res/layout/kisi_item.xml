@@ -68,7 +68,7 @@
 
                 <TextView
                     android:id="@+id/AdSoyad"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="@string/tvKisiAdSoyad"
                     android:textColor="@color/colorAccent"
@@ -78,7 +78,7 @@
 
                 <TextView
                     android:id="@+id/TelNo"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:text="@string/tvNumara"
                     android:textSize="15sp"

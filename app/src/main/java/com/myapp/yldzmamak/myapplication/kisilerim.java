@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,6 +45,47 @@ public class kisilerim extends AppCompatActivity implements Comparator<kisi> {
     TextView textView;
     SearchView searchView;
     private AdView mAdView;
+    AVLoadingIndicatorView avi;
+    ProgressBar progressBar;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_kisilerim);
+
+        MobileAds.initialize(this, "ca-app-pub-5507053716111047~7567517224");
+
+        mAdView = (AdView) findViewById(R.id.adView_kisilerim); //Reklamın layoutda tanımladığımız idsini alıyoruz ve load ediyoruz.
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+
+        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        //avi = (AVLoadingIndicatorView) findViewById(R.id.avi);
+        progressBar = (ProgressBar) findViewById(R.id.progress);
+
+        floatingActionButton = (FloatingActionButton)findViewById(R.id.fab);
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent kisi_bilgileri_gecis=new Intent(kisilerim.this, KisiekleActivity.class);
+                startActivity(kisi_bilgileri_gecis);
+            }
+        });
+    }
+
+    void startAnim(){
+   //     avi.show();
+        // or avi.smoothToShow();
+    }
+
+    void stopAnim(){
+      //  avi.hide();
+        // or avi.smoothToHide();
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -52,49 +95,8 @@ public class kisilerim extends AppCompatActivity implements Comparator<kisi> {
 
         recyclerView = (RecyclerView) findViewById(R.id.rcView);
 
-        //MobileAds.initialize(this, "ca-app-pub-5507053716111047~7567517224");
-
-
-       /* mAdView.setAdListener(new AdListener(){
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-            }
-
-            @Override
-            public void onAdFailedToLoad(int i) {
-                super.onAdFailedToLoad(i);
-                Toast.makeText(kisilerim.this, "onAdFailedToLoad  "+String.valueOf(i), Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-                super.onAdLeftApplication();
-            }
-
-            @Override
-            public void onAdOpened() {
-                super.onAdOpened();
-            }
-
-            @Override
-            public void onAdLoaded() {
-                Toast.makeText(kisilerim.this, "onAdLoaded", Toast.LENGTH_SHORT).show();
-                super.onAdLoaded();
-            }
-
-            @Override
-            public void onAdClicked() {
-                super.onAdClicked();
-            }
-
-            @Override
-            public void onAdImpression() {
-                super.onAdImpression();
-            }
-        });
-*/
         if(prodList.size()!= 0) {
+            progressBar.setVisibility(View.INVISIBLE);
             textView.setVisibility(View.INVISIBLE);
             recyclerView.setVisibility(View.VISIBLE);
             Collections.sort(prodList, new kisilerim());
@@ -113,6 +115,8 @@ public class kisilerim extends AppCompatActivity implements Comparator<kisi> {
                     kisilerim.this.startActivity(i);
                 }
             });
+            //List<kisi> filtermodelist=filter(prodList,"");
+            //mAdapter.setfilter(filtermodelist);
             recyclerView.setAdapter(mAdapter);
 
         }else {
@@ -125,7 +129,7 @@ public class kisilerim extends AppCompatActivity implements Comparator<kisi> {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && checkSelfPermission(Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, PERMISSIONS_REQUEST_READ_CONTACTS);
             } else {
-
+            progressBar.setVisibility(View.VISIBLE);
             List<kisi> contacts = getContactList();
             prodList = contacts;
             if (contacts.size() == 0) {
@@ -148,6 +152,7 @@ public class kisilerim extends AppCompatActivity implements Comparator<kisi> {
                         kisilerim.this.startActivity(i);
                     }
                 });
+                progressBar.setVisibility(View.INVISIBLE);
                 recyclerView.setAdapter(mAdapter);
             }
         }
@@ -161,6 +166,7 @@ public class kisilerim extends AppCompatActivity implements Comparator<kisi> {
                 // Permission is granted
                 showContacts();
             } else {
+                progressBar.setVisibility(View.INVISIBLE);
                 textView.setVisibility(View.VISIBLE);
             }
         }
@@ -285,33 +291,7 @@ public class kisilerim extends AppCompatActivity implements Comparator<kisi> {
         return trimed;
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kisilerim);
 
-        MobileAds.initialize(this, "ca-app-pub-5507053716111047~7567517224");
-
-        mAdView = (AdView) findViewById(R.id.adView_kisilerim); //Reklamın layoutda tanımladığımız idsini alıyoruz ve load ediyoruz.
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
-        List<kisi> filtermodelist=filter(prodList,"");
-        mAdapter.setfilter(filtermodelist);
-
-        toolbar = (Toolbar)findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        floatingActionButton = (FloatingActionButton)findViewById(R.id.fab);
-
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent kisi_bilgileri_gecis=new Intent(kisilerim.this, KisiekleActivity.class);
-                startActivity(kisi_bilgileri_gecis);
-            }
-        });
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

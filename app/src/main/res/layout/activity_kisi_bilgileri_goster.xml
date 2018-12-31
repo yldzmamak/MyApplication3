@@ -152,6 +152,7 @@
        android:layout_marginLeft="20dp"
        android:layout_marginTop="20dp">
        <TextView
+           android:paddingLeft="5dp"
            android:gravity="center_vertical"
            android:layout_width="match_parent"
            android:layout_height="50dp"
@@ -244,7 +245,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_toRightOf="@+id/tvCinsiyetIcon"
-            android:text="Kadın"
             android:textColor="@color/colorAccent"
             android:layout_margin="4dp" />
 

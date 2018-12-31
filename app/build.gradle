@@ -38,4 +38,6 @@ dependencies {
     implementation 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
     implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
     implementation 'com.google.android.gms:play-services-ads:17.0.0'
+    implementation 'com.wang.avi:library:2.1.3'
+
 }
